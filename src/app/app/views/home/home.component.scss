@@ -1,0 +1,51 @@
+@import '../../../../styles.scss';
+
+#home {
+	height: 100vh;
+	background: url('../../../../assets/img/home/home-background.jpg') center center no-repeat;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	text-align: center;
+
+	.content {
+		figure {
+			width: 500px;
+			max-height: 475px;
+			margin: 0 auto 120px;
+			img {
+				width: 100%;
+			}
+		}
+		.copy {
+			h2 {
+				font-family: $serif;
+				font-size: 104px;
+				color: #fff;
+			}
+			p.cta {
+				background: $green;
+				font-size: 36px;
+				color: #fff;
+				font-family: $sans-serif;
+				font-weight: bold;
+				text-transform: uppercase;
+				padding: 20px 0;
+				width: 1100px;
+				margin-top: 30px;
+				-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+				-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+				box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+				cursor: pointer;
+				span {
+					img {
+						height: 40px;
+						width: 40px;
+						margin: -8px 20px -8px 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,180 @@
+@import '../../../../styles.scss';
+
+
+#register {
+	.show {
+		display: block;
+	}
+	.hide {
+		display: none;
+	}
+	.container {
+		max-width: 1230px;
+		margin: 0 auto;
+		.content {
+			position: relative;
+			figure {
+				width: 207px;
+				background: $green;
+				float: left;
+				height: 290px;
+				margin-top: -140px;
+				margin-right: 25px;
+				img {
+					max-width: 100%;
+					width: 140px;
+					height: 157px;
+					display: block;
+					margin: 110px auto 0;
+				}
+			}
+			.title {
+				margin-top: 140px;
+				h2 {
+					font-size: 78px;
+					font-family: $serif;
+					color: $grey;
+					text-transform: uppercase;
+					span {
+						color: $green;
+					}
+				}
+			}
+			p {
+				font-size: 24px;
+				color: $green;
+				margin: 15px 0;
+				padding: 25px 0;
+				border-top: 1px solid $grey;
+				border-bottom: 1px solid $grey;
+			}
+		}
+	}
+}
+#mc_embed_signup {
+
+	width: 100%;
+	margin-top: 50px;
+	.left {
+		width: 675px;
+		float: left;
+	}
+	.right {
+		float: left;
+		width: 500px;
+	}
+	input {
+		border: 1px solid $grey;
+		display: block;
+		width: 90%;
+		padding: 10px;
+		font-size: 19px;
+		line-height: 30px;
+		color: $green;
+		text-transform: uppercase;
+		font-family: $sans-serif;
+		font-weight: bold;
+		margin-bottom: 30px;
+		&::placeholder {
+			color: $green;
+		}
+ 	}	
+	.phonefield {
+		input {
+			width: 140px;
+			margin-right: 10px;
+			display: inline-block;
+			&.last-phone {
+				width: 240px;
+			}
+		}
+	}
+	.optin {
+		.checkbox-container {
+			font-size: 24px;
+			line-height: 1.3;
+			color: $green;
+			font-weight: 100;
+			display: block;
+		}
+		p.small {
+			color: $grey;
+			font-size: 14px;
+			line-height: 1.2;
+			margin: 18px 0;
+		}
+	}
+	.checkbox-container {
+		margin-top: 163px;
+		display: block;
+		position: relative;
+		margin-bottom: 12px;
+		cursor: pointer;
+		font-size: 22px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		input {
+			display: block;
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+		span.checkmark {
+			position: absolute;
+			top: -80px;
+			left: 0;
+			height: 50px;
+			width: 50px;
+			background-color: #eee;
+			border: 1px solid $grey;
+			transition: all 0.2s ease;
+			&:after {
+				content: "";
+				position: absolute;
+				display: none;
+				left: 18px;
+
+				top: 10px;
+				width: 10px;
+				height: 20px;
+				border: solid white;
+				border-width: 0 3px 3px 0;
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+		}
+		input:checked ~ span.checkmark {
+			background: $green;
+			border: 1px solid $green;
+		}
+		input:checked ~ span.checkmark:after {
+			display: block;
+		}
+	}
+
+	#rhhLogo {
+		width: 175px;
+		margin-bottom: 40px;
+	}
+	#mc-embedded-subscribe {
+		background: $green;
+		color: #fff;
+		font-size: 36px;
+		width: 485px;
+		height: 75px;
+		border: none;
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+		transition: all 0.2s ease;
+		&:disabled {
+			background: $grey;
+			opacity: 0.5;
+		}
+	}
+}

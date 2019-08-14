@@ -1,0 +1,204 @@
+<section id="register">
+	<div class="container">
+		<div class="content">
+			<div class="wrap">
+				<figure>
+					<img src="../../assets/img/home/home-logo.svg">
+				</figure>
+				<div class="title">
+					<h2>Register<br>For <span>Pinehurst</span></h2>
+				</div>
+				<p>Fill out the form below to register for up-to-date information regarding this wonderful new community. Thank you.</p>
+			</div>
+		</div>
+		<div [ngClass]="hideForm ? 'hide' : 'show'">
+		<!-- Begin Mailchimp Signup Form -->
+		<div id="mc_embed_signup">
+			<form 
+			#f="ngForm"
+			(ngSubmit)="f.form.valid && submitForm()" 
+			id="mc-embedded-subscribe-form" 
+			name="mc-embedded-subscribe-form" 
+			class="validate" 
+			novalidate>
+				<div class="left">
+					<div id="mc_embed_signup_scroll">
+						<div class="mc-field-group">
+							<input 
+							[(ngModel)]="model.name" 
+							#name="ngModel" 
+							[ngModelOptions]="{ updateOn: 'blur' }"
+							type="text" 
+							value="" 
+							name="FNAME" 
+							class="" 
+							id="mce-FNAME" 
+							placeholder="Name">
+						</div>
+						<div class="mc-field-group">
+							<input 
+							[(ngModel)]="model.email" 
+							#email="ngModel" 
+							[ngModelOptions]="{ updateOn: 'blur' }"
+							type="email" 
+							value="" 
+							name="EMAIL" 
+							class="required email" 
+							id="mce-EMAIL" 
+							placeholder="Email"
+							required>
+						</div>
+						<div class="mc-field-group size1of2">
+							<div class="phonefield phonefield-us">
+								<span class="phonearea">
+									<input 
+									[(ngModel)]="model.phone1" 
+									#phone1="ngModel" 
+									[ngModelOptions]="{ updateOn: 'blur' }"
+									placeholder="Phone" 
+									class="phonepart " 
+									pattern="[0-9]*" 
+									id="mce-MMERGE2-area" 
+									name="MMERGE2[area]" 
+									maxlength="3" 
+									size="3" 
+									value="" 
+									type="text">
+								</span> -
+								<span class="phonedetail1">
+									<input 
+									[(ngModel)]="model.phone2" 
+									#phone2="ngModel" 
+									[ngModelOptions]="{ updateOn: 'blur' }"
+									class="phonepart " 
+									pattern="[0-9]*" 
+									id="mce-MMERGE2-detail1" 
+									name="MMERGE2[detail1]" 
+									maxlength="3" 
+									size="3" 
+									value="" 
+									type="text">
+								</span> -  
+								<span class="phonedetail2">
+									<input 
+									[(ngModel)]="model.phone3" 
+									#phone3="ngModel" 
+									[ngModelOptions]="{ updateOn: 'blur' }"
+									class="phonepart last-phone" 
+									pattern="[0-9]*" 
+									id="mce-MMERGE2-detail2" 
+									name="MMERGE2[detail2]" 
+									maxlength="4" 
+									size="4" 
+									value="" 
+									type="text">
+								</span>
+							</div>
+						</div>
+						<div class="mc-address-group">
+							<div class="mc-field-group">
+								<input 
+								[(ngModel)]="model.address" 
+								#address="ngModel" 
+								[ngModelOptions]="{ updateOn: 'blur' }"
+								type="text" 
+								value="" 
+								maxlength="70" 
+								name="ADDRESS[addr1]" 
+								id="mce-ADDRESS-addr1" 
+								class="" 
+								placeholder="Address">
+							</div>
+							<div class="mc-field-group size1of2">
+								<input 
+								[(ngModel)]="model.city" 
+								#city="ngModel" 
+								[ngModelOptions]="{ updateOn: 'blur' }"
+								type="text" 
+								value="" 
+								maxlength="40" 
+								name="ADDRESS[city]" 
+								id="mce-ADDRESS-city" 
+								class="" 
+								placeholder="City">
+							</div>
+							<div class="mc-field-group size1of2">
+								<input 
+								[(ngModel)]="model.province" 
+								#province="ngModel" 
+								[ngModelOptions]="{ updateOn: 'blur' }"
+								type="text" 
+								value="" 
+								maxlength="20" 
+								name="ADDRESS[state]" 
+								id="mce-ADDRESS-state" 
+								class="" 
+								placeholder="Province">
+							</div>
+							<div class="mc-field-group size1of2">
+								<input 
+								[(ngModel)]="model.postal" 
+								#postal="ngModel" 
+								[ngModelOptions]="{ updateOn: 'blur' }"
+								type="text" 
+								value="" 
+								maxlength="10" 
+								name="ADDRESS[zip]" 
+								id="mce-ADDRESS-zip" 
+								class="" 
+								placeholder="Postal Code">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="mc-field-group input-group optin">
+					<ul><li>
+						<label for="mce-group[7109]-7109-0" class="checkbox-container">
+						<input 
+						[(ngModel)]="model.optin" 
+						#optin="ngModel" 
+						[ngModelOptions]="{ updateOn: 'blur' }"
+						type="checkbox" 
+						value="1" 
+						name="group[7109][1]" 
+						id="mce-group[7109]-7109-0" 
+						checked="checked">
+						<span class="checkmark"></span>
+							Yes, I want to receive electronic <br>communications containing news, <br>promotions and information from <br>Reid's Heritage Homes Ltd.</label>
+					</li>
+					</ul>
+					<p class="small">
+						You can withdraw your consent at any time. <br>Read our Privacy Policy or Contact Us for more details.
+					</p>
+					<figure id="rhhLogo">
+						<img src="../../assets/img/builder/rhh-logo.svg">
+					</figure>
+					</div>
+					<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_befb39eea1e6b0c35138ba993_56a5be1bd2" tabindex="-1" value=""></div>
+					<div class="clear">
+						<input 
+						[disabled]="!model.email.length"
+						type="submit" 
+						value="Submit" 
+						name="subscribe" 
+						id="mc-embedded-subscribe" class="button"></div>
+				</div>
+			</form>
+		</div>
+<!-- 		<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[2]='MMERGE2';ftypes[2]='phone';fnames[3]='ADDRESS';ftypes[3]='address';}(jQuery));var $mcj = jQuery.noConflict(true);</script> -->
+		<!--End mc_embed_signup-->
+
+		</div>
+		<div id="submitSuccess" [ngClass]="showSuccess ? 'show' : 'hide'">
+				<p>
+					Thank you!
+				</p>
+			</div>
+	</div>
+	
+</section>
